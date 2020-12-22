@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'; 
-import { withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'; 
+import Summary from '../Summary/Summary'
+import Header from '../Header/Header'
 import {
  AppBar, 
-
 } from '@material-ui/core';
 
 
@@ -12,12 +13,8 @@ class Home extends Component {
   render() {
     return (
       <div> 
-        <AppBar style={{ background: 'transparent', boxShadow: 'none'}}>
-          <h1>Malik Elate</h1>
-        </AppBar> 
-        <div> 
-          <img></img>
-        </div>
+        <Header/> 
+        <Summary/>
       </div>
     );
   }

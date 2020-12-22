@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../../App.css';
 import {HashRouter as Router, Route} from 'react-router-dom';
 import Home from '../Home/Home'
+import Socials from '../Socials/Socials'
 
 class App extends Component {
   render() {

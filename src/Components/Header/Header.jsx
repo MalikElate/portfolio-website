@@ -2,7 +2,11 @@ import React                       from "react";
 import TextTransition, { presets } from "react-text-transition";
 import {
   AppBar, 
- 
+  Toolbar,
+  withStyles,
+  Button, 
+  Typography, 
+
  } from '@material-ui/core';
 
 const TEXTS = [
@@ -11,8 +15,9 @@ const TEXTS = [
   "Tree",
   "Color"
 ];
- 
+
 const Header = () => {
+
   const [index, setIndex] = React.useState(0);
  
   React.useEffect(() => {
@@ -23,16 +28,26 @@ const Header = () => {
   });
  
   return (
-    <AppBar position="static" style={{ background: 'transparent', boxShadow: 'none'}}>
-      <h1>
+    <AppBar position="static" style={{ background: 'transparent', boxShadow: 'none'}}> 
+      <Toolbar>
+          <Button>Contact</Button>
+          <Button>Portfolio</Button>
+          <Button>Skills</Button>
+      </Toolbar>
+          <Typography variant="h3">Malik Elate</Typography>
+      {/* <h2 style={{textAlign: 'center'}}>
         <TextTransition
           text={ TEXTS[index % TEXTS.length] }
-          springConfig={ presets.wobbly }
+          springConfig={ presets.slow
+          }
+          delay={5000}
+          slow
+          className="subheader"
         />
-      </h1>
+      </h2> */}
     </AppBar> 
   );
 };
 
 
-export default Header;
+export default (Header)

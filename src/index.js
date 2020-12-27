@@ -2,9 +2,54 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './Components/App/App';
+import axios from 'axios'; 
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import logger from 'redux-logger';
+import {takeEvery, put} from 'redux-saga/effects';
+import createSagaMiddleware from 'redux-saga';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// Create the rootSaga generator function
+function* rootSaga() {
+    yield takeEvery('GET_PROJECTS_CARD_INFO', getProjects); 
+}
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
+// Create sagaMiddleware
+const sagaMiddleware = createSagaMiddleware();
+
+// Used to store movies returned from the server
+const projectCardInfo = (state = [], action) => {
+    switch (action.type) {
+        case 'SET_PROJECTS_CARD_INFO':
+            return action.payload;
+        default:
+            return state;
+    }
+} 
+// get the genre for movie on details page 
+function* getProjects(){ 
+    try {
+        const response = yield axios.get('/project');
+        yield put({type: 'SET_PROJECTS_CARD_INFO', payload: response.data})
+        console.log(response.data);
+    }
+    catch (error) {
+        console.log('error with projects get request', error);
+    }
+}
+
+// Create one store that all components can use
+const storeInstance = createStore(
+    combineReducers({
+        projectCardInfo
+    }),
+    // Add sagaMiddleware to our store
+    applyMiddleware(sagaMiddleware, logger),
+);
+
+// Pass rootSaga into our sagaMiddleware
+sagaMiddleware.run(rootSaga);
+
+ReactDOM.render(<Provider store={storeInstance}><App /></Provider>, 
+    document.getElementById('root'));
+

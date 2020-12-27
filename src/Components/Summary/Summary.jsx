@@ -1,43 +1,16 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'; 
-import { withRouter } from 'react-router-dom'
 import {
   Grid, 
-  withStyles, 
-  Paper, 
   Typography
 } from '@material-ui/core';
 
-const styles = theme => ({
-  root: {
-    flexGrow: 1,
-  },
-  demo: {
-    height: 240,
-  },
-  paper: {
-    padding: theme.spacing.unit * 2,
-    height: '100%',
-    color: theme.palette.text.secondary,
-  },
-  control: {
-    padding: theme.spacing.unit * 2,
-  },
-});
 
 class Summary extends Component {
   render() {
-    const { classes } = this.props;
     return (
           <Grid
           container
-          // wrap='nowrap'
-          spacing={100}
-          // className={classes.demo}
-          // direction="row"
           justify="center"
-          // alignItems="center"
-          lg={12}
           > 
             <Grid item lg={3} sm={6} xs={12}>
               <Typography
@@ -71,4 +44,4 @@ class Summary extends Component {
   }
 }
 
-export default withStyles(styles)(Summary);
+export default Summary;

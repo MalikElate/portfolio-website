@@ -8,17 +8,17 @@ import { DiReact,
   DiPostgresql, 
   DiJqueryLogo, 
   DiNodejsSmall, 
-  DiNpm
+  DiNpm, 
+  DiBootstrap
 } from "react-icons/di";
 import {
-  IconButton, 
   Typography
 } from '@material-ui/core';
 
 class Skills extends Component {
   render() {
     return (
-      <div className=""> 
+      <div> 
         <Typography variant="h4">Skills</Typography>
         <DiJavascript1 className="logo"/> 
         <DiPython className="logo"/> 
@@ -32,6 +32,7 @@ class Skills extends Component {
         <SiFlask className="logo"/> 
         <DiNodejsSmall className="logo"/> 
         <DiNpm className="logo"/> 
+        <DiBootstrap className="logo"/> 
 
       </div>
     );

@@ -16,13 +16,13 @@ class ProjectList extends Component {
     return (
       <> 
         <Typography variant="h4">Projects</Typography>
-        {JSON.stringify(this.props.reduxState.projectCardInfo)}
         <Grid 
           container 
         >
           { 
             this.props.reduxState.projectCardInfo.map((project, i) => 
-              <Grid className="project-card-grid" key={i} item lg={3} sm={6} xs={12}
+              <Grid 
+              className="project-card-grid" key={i} item lg={3} sm={6} xs={12}
               container
               direction="row"
               justify="center"

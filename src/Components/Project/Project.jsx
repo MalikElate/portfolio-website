@@ -30,7 +30,7 @@ class Project extends Component {
         <CardActionArea>
           <CardMedia
             component="img"
-            alt="Contemplative Reptile"
+            alt={this.props.projectInfo.title}
             className={classes.media}
             height="5%"
             image={this.props.projectInfo.image}
@@ -47,13 +47,15 @@ class Project extends Component {
         </CardActionArea>
         <CardActions>
             <a target="_blank" className="social-link-a" href={this.props.projectInfo.githubLink} rel="noopener noreferrer">
-          <Button size="small" color="primary">
-              GitHub
-          </Button>
+              <Button size="small" color="primary">
+                  Code
+              </Button>
             </a>
-          <Button size="small" color="primary">
-            Demo
-          </Button>
+            <a target="_blank" className="social-link-a" href={this.props.projectInfo.demoLink} rel="noopener noreferrer">
+              <Button size="small" color="primary">
+                Demo
+              </Button>
+            </a>
         </CardActions>
       </Box>
     </Card>

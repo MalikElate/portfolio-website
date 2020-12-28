@@ -7,13 +7,22 @@ import {
   Typography, 
 
  } from '@material-ui/core';
-
+ import { makeStyles } from '@material-ui/core/styles';
 // const TEXTS = [
 //   "Malik Elate",
 //   "Building",
 //   "Tree",
 //   "Color"
 // ];
+
+const useStyles = makeStyles((theme) => ({
+  appBarTransparent: {
+      backgroundColor: 'rgba(67, 129, 168,0.5)'
+  },
+  appBarSolid: {
+      backgroundColor: 'rgba(67, 129, 168)'
+  }
+}));
 
 const Header = () => {
 
@@ -25,9 +34,10 @@ const Header = () => {
   //     3000 // every 3 seconds
   //   );
   // });
- 
+
+
   return (
-    <AppBar position="static" style={{ background: 'transparent', boxShadow: 'none'}}> 
+    <AppBar position="fixed" style={{ background: 'transparent', boxShadow: 'none'}}> 
       <Toolbar>
           <Button>Contact</Button>
           <Button>Portfolio</Button>

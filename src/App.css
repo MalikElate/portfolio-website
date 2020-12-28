@@ -17,3 +17,8 @@
 .project-card-grid { 
   margin: 50px
 }
+
+.summary-div { 
+  display: block;
+  padding: 1%;
+}

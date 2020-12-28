@@ -21,6 +21,10 @@
 }
 
 .card { 
-  color: red; 
-  background-color: red;
+  background-color: rgb(40, 30, 40);
+  transition: all .25s linear;
+  box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.4);
+}
+.card:hover{
+  box-shadow: -3px 30px 80px 0px rgba(0,0,0,0.8);
 }

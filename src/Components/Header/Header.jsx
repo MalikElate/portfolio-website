@@ -5,24 +5,14 @@ import {
   Toolbar,
   Button, 
   Typography, 
-
  } from '@material-ui/core';
- import { makeStyles } from '@material-ui/core/styles';
-// const TEXTS = [
-//   "Malik Elate",
-//   "Building",
-//   "Tree",
-//   "Color"
-// ];
 
-const useStyles = makeStyles((theme) => ({
-  appBarTransparent: {
-      backgroundColor: 'rgba(67, 129, 168,0.5)'
-  },
-  appBarSolid: {
-      backgroundColor: 'rgba(67, 129, 168)'
-  }
-}));
+const TEXTS = [
+  "Malik Elate",
+  "Building",
+  "Tree",
+  "Color"
+];
 
 const Header = () => {
 
@@ -35,15 +25,13 @@ const Header = () => {
   //   );
   // });
 
-
   return (
-    <AppBar position="fixed" style={{ background: 'transparent', boxShadow: 'none'}}> 
+    <AppBar position="fixed" style={{ background: 'rgb(40, 30, 40)', boxShadow: 'none'}}> 
       <Toolbar>
-          <Button>Contact</Button>
-          <Button>Portfolio</Button>
-          <Button>Skills</Button>
+          <Button onClick={()=>{ window.scrollTo(0,document.body.scrollHeight)}} style={{color: 'white'}}>Contact</Button>
+          <Button style={{color: 'white'}}>Portfolio</Button>
+          <Button style={{color: 'white'}}>Skills</Button>
       </Toolbar>
-          <Typography variant="h3">Malik Elate</Typography>
       {/* <h2 style={{textAlign: 'center'}}>
         <TextTransition
           text={ TEXTS[index % TEXTS.length] }

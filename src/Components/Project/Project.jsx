@@ -8,7 +8,6 @@ import {
   Button, 
   CardActions, 
   withStyles, 
-  Box
 } from '@material-ui/core';
 
 const styles = {
@@ -25,9 +24,8 @@ class Project extends Component {
   render() {
     const { classes } = this.props;
     return (
-      <Card className={classes.card}>
-        <Box boxShadow={2}> 
-        <CardActionArea>
+      <Card className={classes.card, 'card'}>
+        <CardActionArea onClick={() => {window.open(this.props.projectInfo.demoLink);}}>
           <CardMedia
             component="img"
             alt={this.props.projectInfo.title}
@@ -35,8 +33,9 @@ class Project extends Component {
             height="5%"
             image={this.props.projectInfo.image}
             title="Contemplative Reptile"
-          />
-        <CardContent>
+            />
+            </CardActionArea>
+            <CardContent>
             <Typography gutterBottom variant="h6" component="h2">
               {this.props.projectInfo.title}
             </Typography>
@@ -44,7 +43,6 @@ class Project extends Component {
             {this.props.projectInfo.description}
             </Typography>
           </CardContent>
-        </CardActionArea>
         <CardActions>
             <a target="_blank" className="social-link-a" href={this.props.projectInfo.githubLink} rel="noopener noreferrer">
               <Button size="small" color="primary">
@@ -57,7 +55,6 @@ class Project extends Component {
               </Button>
             </a>
         </CardActions>
-      </Box>
     </Card>
     );
   }

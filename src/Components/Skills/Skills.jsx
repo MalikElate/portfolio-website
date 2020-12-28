@@ -9,31 +9,67 @@ import { DiReact,
   DiJqueryLogo, 
   DiNodejsSmall, 
   DiNpm, 
-  DiBootstrap
+  DiBootstrap, 
 } from "react-icons/di";
 import {
-  Typography
+  Typography, 
+  Grid
 } from '@material-ui/core';
 
 class Skills extends Component {
   render() {
     return (
       <div> 
-        <Typography variant="h4">Skills</Typography>
-        <DiJavascript1 className="logo"/> 
-        <DiPython className="logo"/> 
-        <AiFillHtml5 className="logo"/> 
-        <DiCss3Full className="logo"/> 
-        <DiPostgresql className="logo"/> 
-        <DiReact className="logo"/> 
-        <SiRedux className="logo"/> 
-        <SiMaterialUi className="logo"/> 
-        <DiJqueryLogo className="logo"/> 
-        <SiFlask className="logo"/> 
-        <DiNodejsSmall className="logo"/> 
-        <DiNpm className="logo"/> 
-        <DiBootstrap className="logo"/> 
-
+        <Grid className="summary-div">
+        <Typography 
+          variant='h4' 
+          style={{width: '40%', textAlign: 'left', marginLeft: 20}}>
+            Skills
+        </Typography>
+        {/* ----------------- Language --------------------  */}
+        <Typography 
+          variant='h5' 
+          style={{width: '40%', textAlign: 'left', marginLeft: 40}}>
+            Languages
+        </Typography>
+        <Typography 
+          variant='h4' 
+          style={{width: '40%', textAlign: 'left', marginLeft: 40}}>
+          <DiJavascript1 className="logo"/> 
+          <DiPython className="logo"/> 
+          <AiFillHtml5 className="logo"/> 
+          <DiCss3Full className="logo"/> 
+          <DiPostgresql className="logo"/> 
+        </Typography>
+        {/* ----------------- Frameworks and libraries --------------------  */}
+        <Typography 
+          variant='h5' 
+          style={{width: '40%', textAlign: 'left', marginLeft: 40}}>
+            Frameworks and libraries
+        </Typography>
+        <Typography 
+          variant='h4' 
+          style={{width: '40%', textAlign: 'left', marginLeft: 40}}> 
+          <DiReact className="logo"/> 
+          <SiRedux className="logo"/> 
+          <SiMaterialUi className="logo"/> 
+          <DiJqueryLogo className="logo"/> 
+          <SiFlask className="logo"/> 
+          <DiNodejsSmall className="logo"/> 
+          <DiBootstrap className="logo"/> 
+        </Typography>
+         {/* ----------------- Environments --------------------  */}
+         <Typography 
+          variant='h5' 
+          style={{width: '40%', textAlign: 'left', marginLeft: 40}}>
+            Environments
+        </Typography>
+        <Typography 
+          variant='h4' 
+          style={{width: '40%', textAlign: 'left', marginLeft: 50}}> 
+          <DiNpm className="logo"/> 
+        </Typography>
+      </Grid>
       </div>
     );
   }

@@ -30,7 +30,6 @@ class ProjectList extends Component {
               alignItems="center"
               style={{ padding: 20}}
               > 
-              hell from map
                 <Project projectInfo={this.props.reduxState.projectCardInfo[i]} style={{marginTop:"50"}}/>
               </Grid>
             )

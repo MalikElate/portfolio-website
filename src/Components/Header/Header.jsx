@@ -1,18 +1,17 @@
-import React                       from "react";
+import React from "react";
 // import TextTransition, { presets } from "react-text-transition";
 import {
   AppBar, 
   Toolbar,
   Button, 
-  Typography, 
  } from '@material-ui/core';
 
-const TEXTS = [
-  "Malik Elate",
-  "Building",
-  "Tree",
-  "Color"
-];
+// const TEXTS = [
+//   "Malik Elate",
+//   "Building",
+//   "Tree",
+//   "Color"
+// ];
 
 const Header = () => {
 

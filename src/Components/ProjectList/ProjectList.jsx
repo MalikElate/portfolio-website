@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'; 
 import Project from '../Project/Project'; 
 import {
-  Typography, 
   Grid
 } from '@material-ui/core';
 

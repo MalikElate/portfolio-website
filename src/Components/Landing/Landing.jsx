@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Summary from '../Summary/Summary'; 
+import Header from '../Header/Header'; 
 import { withRouter } from 'react-router-dom'
-import Typing from 'react-typing-animation';
+import Subheader from '../Subheader/Subheader'; 
 import {
   Grid,
   Button, 
@@ -18,6 +18,8 @@ class Home extends Component {
   render() {
 
     return (
+      <>
+      <Header/>
         <Grid className="App-header"
           item
           container
@@ -27,9 +29,11 @@ class Home extends Component {
           style={{ padding: 20, backgroundImage: "url('./images/image100.png')", }}
           > 
           <Typography className="App-h1" variant="h1">Malik Elate</Typography> 
-          <Summary/> 
+          <Typography className="App-h1" variant="h6"><Subheader/></Typography> 
+          {/* <Summary/>  */}
           <Button onClick={()=>{this.viewProjects()}} style={{color: 'white', marginTop: 50}}>Projects</Button>
         </Grid>
+      </>
     );
   }
 }

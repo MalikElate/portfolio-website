@@ -21,15 +21,15 @@ class Skills extends Component {
     return (
       <div> 
         <Grid className="summary-div">
-        <Typography 
+        {/* <Typography 
           variant='h4' 
           style={{width: '40%', textAlign: 'left', marginLeft: 20}}>
             Skills
-        </Typography>
-        {/* ----------------- Language --------------------  */}
+        </Typography> */}
+        {/* ----------------- Languages --------------------  */}
         <Typography 
           variant='h5' 
-          style={{width: '40%', textAlign: 'left', marginLeft: 40}}>
+          style={{width: '40%', textAlign: 'left', marginLeft: 40, display: 'inline'}}>
             Languages
         </Typography>
         <Typography 
@@ -47,17 +47,20 @@ class Skills extends Component {
           style={{width: '40%', textAlign: 'left', marginLeft: 40}}>
             Frameworks and libraries
         </Typography>
-        <Typography 
+          {/* <div> */}
+            <Typography 
           variant='h4' 
           style={{width: '40%', textAlign: 'left', marginLeft: 40}}> 
-          <DiReact className="logo"/> 
-          <SiRedux className="logo"/> 
+            <DiReact className="logo"/>
+            {/* <Typography variant='body1' style={{display: 'inline'}}>React</Typography> */}
+            <SiRedux className="logo"/> <Typography variant='body1'>Redux</Typography>
+            </Typography>
+          {/* </div> */}
           <SiMaterialUi className="logo"/> 
           <DiJqueryLogo className="logo"/> 
           <SiFlask className="logo"/> 
           <DiNodejsSmall className="logo"/> 
           <DiBootstrap className="logo"/> 
-        </Typography>
          {/* ----------------- Environments --------------------  */}
          <Typography 
           variant='h5' 

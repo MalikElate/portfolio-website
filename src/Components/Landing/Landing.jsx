@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import Header from '../Header/Header'; 
-import { withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'; 
 import Subheader from '../Subheader/Subheader'; 
 import {
   Grid,
-  Button, 
   Typography, 
  } from '@material-ui/core';
 
@@ -19,7 +18,7 @@ class Home extends Component {
 
     return (
       <>
-      <Header/>
+      <Header background={'transparent'}/>
         <Grid className="App-header"
           item
           container
@@ -31,7 +30,7 @@ class Home extends Component {
           <Typography className="App-h1" variant="h1">Malik Elate</Typography> 
           <Typography className="App-h1" variant="h6"><Subheader/></Typography> 
           {/* <Summary/>  */}
-          <Button onClick={()=>{this.viewProjects()}} style={{color: 'white', marginTop: 50}}>Projects</Button>
+          {/* <Button onClick={()=>{this.viewProjects()}} style={{color: 'white', marginTop: 50}}>Projects</Button> */}
         </Grid>
       </>
     );

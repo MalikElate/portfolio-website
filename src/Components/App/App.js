@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import '../../App.css';
 import {HashRouter as Router, Route} from 'react-router-dom';
-import Home from '../Home/Home';
+import Portfolio from '../Portfolio/Portfolio';
 import { AnimatedRoute } from 'react-router-transition';
-import Header from '../Header/Header'; 
-import Socials from '../Socials/Socials'; 
-import Skills from '../Skills/Skills'; 
-import ProjectList from '../ProjectList/ProjectList'; 
+import About from '../About/About'; 
 import Landing from '../Landing/Landing';
 
 class App extends Component {
@@ -15,10 +12,19 @@ class App extends Component {
     return (
       <div className="App">
         <Router>
-          <Route  exact path='/' component={Landing} />
+          {/* <Route  exact path='/' component={Landing} /> */}
+          <AnimatedRoute
+            exact path="/"
+            component={Landing}
+            atEnter={{ offset: -100 }}
+            atActive={{ offset: 0 }}
+            mapStyles={(styles) => ({
+            transform: `translateX(${styles.offset}%)`,
+            })}
+          />
           <AnimatedRoute
             path="/projects"
-            component={Home}
+            component={Portfolio}
             atEnter={{ offset: -100 }}
             atLeave={{ offset: -100 }}
             atActive={{ offset: 0 }}
@@ -27,7 +33,7 @@ class App extends Component {
             })}
           />
           {/* <Route  path='/projects' component={Home} /> */}
-          <Route  path='/skills' component={Skills} />
+          <Route  path='/About' component={About} />
         </Router>
       </div>
     );

@@ -3,27 +3,21 @@
 }
 
 .App-header  {
-  /* opacity: 0.5;  */
   background-position: 100%;
   background-size: cover;
   height: 60rem; 
   padding: 20px;
-  color: white;
+  color: white; 
 }
 
 .App-h1 { 
   margin-top: 40%; 
   padding: 5%;
-  /* filter: brightness(1) !important;  */
 }
 
 .logo {   
   height: 6vmin; 
   width: 6vmin
-}
-
-.social-link-a { 
-  color: white 
 }
 
 .project-card-grid { 
@@ -36,10 +30,12 @@
 }
 
 .card { 
-  background-color: rgb(40, 30, 40);
   transition: all .25s linear;
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.4);
 }
 .card:hover{
-  box-shadow: -1px 8px 18px 0px rgba(0,0,0,0.8);
+  box-shadow: -1px 6px 10px 0px rgba(0,0,0,0.8);
+}
+a {
+  text-decoration: none;
 }

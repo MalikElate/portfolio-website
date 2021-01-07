@@ -22,7 +22,7 @@ const portfolioData = [
     }, 
     {
         title: 'DoorDash Profit Predictor', 
-        description: 'adsfasdfasfd', 
+        description: 'A tool for ride-share drivers to quickly determine the profitability of DoorDash, protecting their bottom line', 
         githubLink: 'https://github.com/MalikElate/Door-Dash-Calculator',
         demoLink: 'Deply to heroku first', 
         image: './images/DoorDash-Calc.png'

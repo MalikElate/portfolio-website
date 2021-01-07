@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../Header/Header'; 
 import Socials from '../Socials/Socials'; 
-import Skills from '../Skills/Skills'; 
 import ProjectList from '../ProjectList/ProjectList'; 
 import {
   AppBar, 

@@ -4,7 +4,6 @@ import { withRouter } from 'react-router-dom';
 import Subheader from '../Subheader/Subheader'; 
 import {
   Grid,
-  Button, 
   Typography, 
  } from '@material-ui/core';
 

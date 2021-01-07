@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom'; 
-// import TextTransition, { presets } from "react-text-transition";
 import {
   AppBar, 
   Toolbar,
@@ -26,7 +25,8 @@ import {
    render() { 
     const { classes } = this.props;
     return (
-      <AppBar position="fixed" style={{ background: 'rgb(45, 35, 45)', boxShadow: 'none'}}> 
+      <>
+      <AppBar position="fixed" style={{ background: this.props.background, boxShadow: 'none'}}> 
         <Toolbar> 
           <Typography align='left' className={classes.grow} style={{color: 'white'}}>
             <Button style={{color: 'white'}} onClick={() => { 
@@ -38,6 +38,7 @@ import {
           <Button style={{color: 'white'}} onClick={()=>{ this.props.history.push('/about')}}>About</Button>
         </Toolbar>
       </AppBar> 
+      </>
     );
   }
 };

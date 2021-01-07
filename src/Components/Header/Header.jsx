@@ -26,7 +26,7 @@ import {
    render() { 
     const { classes } = this.props;
     return (
-      <AppBar position="fixed" style={{ background: this.props.background, boxShadow: 'none'}}> 
+      <AppBar position="fixed" style={{ background: 'rgb(45, 35, 45)', boxShadow: 'none'}}> 
         <Toolbar> 
           <Typography align='left' className={classes.grow} style={{color: 'white'}}>
             <Button style={{color: 'white'}} onClick={() => { 

@@ -31,7 +31,7 @@ class Portfolio extends Component {
       </Toolbar>
       </AppBar>
       {/* ----------------------------------------------------------------------------------- */}
-      <Header background={'rgb(45, 35, 45)'}/> 
+      {/* <Header background={'rgb(45, 35, 45)'}/>  */}
       <Typography className={classes.TypographyH2} variant="h2">Projects</Typography> 
       <ProjectList/>
       <Socials/>

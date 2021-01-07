@@ -5,6 +5,7 @@ import Portfolio from '../Portfolio/Portfolio';
 import { AnimatedRoute } from 'react-router-transition';
 import About from '../About/About'; 
 import Landing from '../Landing/Landing';
+import Header from '../Header/Header'; 
 
 class App extends Component {
 
@@ -31,8 +32,9 @@ class App extends Component {
             mapStyles={(styles) => ({
             transform: `translateX(${styles.offset}%)`,
             })}
-          />
+          > <Portfolio/> </AnimatedRoute>
           {/* <Route  path='/projects' component={Home} /> */}
+          <Route  path='/projects' component={Header} />
           <Route  path='/About' component={About} />
         </Router>
       </div>

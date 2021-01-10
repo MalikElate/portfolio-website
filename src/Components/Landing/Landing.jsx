@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Header from '../Header/Header'; 
 import { withRouter } from 'react-router-dom'; 
 import Subheader from '../Subheader/Subheader'; 
 import {

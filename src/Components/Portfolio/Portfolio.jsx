@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Header from '../Header/Header'; 
 import Socials from '../Socials/Socials'; 
 import ProjectList from '../ProjectList/ProjectList'; 
 import {

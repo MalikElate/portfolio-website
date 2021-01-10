@@ -29,9 +29,9 @@ const projectCardInfo = (state = [], action) => {
 // get the genre for movie on details page 
 function* getProjects(){ 
     try {
-        const response = yield axios.get('/project');
-        yield put({type: 'SET_PROJECTS_CARD_INFO', payload: response.data})
-        console.log(response.data);
+        const response = yield axios.get('https://tnijvjh31f.execute-api.us-east-1.amazonaws.com/dev');
+        yield put({type: 'SET_PROJECTS_CARD_INFO', payload: response.data.body})
+        console.log('AWS portfolio-stite-project-data lambda function sent back:', response.data.body);
     }
     catch (error) {
         console.log('error with projects get request', error);

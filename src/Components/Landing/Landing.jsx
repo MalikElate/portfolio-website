@@ -48,7 +48,6 @@ class Home extends Component {
         > 
           <Typography className={classes.landingSubHeader} variant="h1">Malik Elate</Typography> 
           <Typography variant="h6"><Subheader/></Typography> 
-          <Typography variant="body1" className={classes.landingSubHeader2}><IoIosArrowForward/></Typography>  
         </Grid>
       </>
     );

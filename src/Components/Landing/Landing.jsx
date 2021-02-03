@@ -1,11 +1,32 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom'; 
 import Subheader from '../Subheader/Subheader'; 
+import { IoIosArrowForward } from 'react-icons/io';
 import {
   Grid,
   Typography, 
+  withStyles, 
+  Button, 
  } from '@material-ui/core';
 
+ const styles = {
+  landingSubHeader:  {
+    marginTop: '15%',
+    padding: '0%',
+    display: "block"
+   }, 
+   landingSubHeader2:  {
+    marginTop: '15%',
+    padding: '0%',
+    display: "inline"
+   }, 
+   projectBtn: { 
+     color: "white"
+   }, 
+   spaceDiv: { 
+
+   }
+ };
 
 class Home extends Component { 
 
@@ -14,23 +35,24 @@ class Home extends Component {
   }
 
   render() {
-
-    return (
+    const { classes } = this.props;
+    return (  
       <>
         <Grid className="App-header"
           item
           container
           direction="column"
-          justify="center"
+          justify="flex-start"
           alignItems="center"
           style={{ padding: 20, backgroundImage: "url('./images/image100.png')", }}
-          > 
-          <Typography className="App-h1" variant="h1">Malik Elate</Typography> 
-          <Typography className="App-h1" variant="h6"><Subheader/></Typography> 
+        > 
+          <Typography className={classes.landingSubHeader} variant="h1">Malik Elate</Typography> 
+          <Typography variant="h6"><Subheader/></Typography> 
+          <Typography variant="body1" className={classes.landingSubHeader2}><IoIosArrowForward/></Typography>  
         </Grid>
       </>
     );
   }
 }
 
-export default withRouter((Home));
+export default withRouter(withStyles(styles)(Home));

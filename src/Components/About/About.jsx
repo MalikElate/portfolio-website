@@ -53,13 +53,14 @@ class Portfolio extends Component {
             <Typography style={{textAlign: 'left'}}>
               Hi! I'm Malik Elate, I am a full stack web engineer. My favorite part of web development
               is working in a team solving a challenging problem. When I'm not coding, you can find my 
-              up north camping and hiking with my dog and friends.
+              up north hiking and camping with my dog and friends.
             </Typography> 
             <ul style={{textAlign: 'left'}}>
             <li>
               Languages
               <ul>
                 <li>Javascript</li>
+                <li>Typescript</li>
                 <li>Python</li>
                 <li>HTML</li>
                 <li>CSS</li>
@@ -83,6 +84,7 @@ class Portfolio extends Component {
                 <li>PostgreSQL</li>
                 <li>Postico</li>
                 <li>MongoDB</li>
+                <li>Mongoose</li>
               </ul>
             </li>
             <li>
@@ -90,6 +92,7 @@ class Portfolio extends Component {
               <ul>
                 <li>Heroku</li>
                 <li>Amazon Web Services</li>
+                <li>MongoDB Atlas</li>
               </ul>
             </li>
           </ul>

@@ -102,11 +102,10 @@ class Portfolio extends Component {
           direction="row"
           className={classes.imageGrid}
           >
-            {/* <img className={classes.aboutImage} src="./images/summary-pic.jpg" alt="picture of Malik Elate"></img> */}
           </Grid>
         </Grid>
       </Box>
-      <Socials/>
+      <Socials background='transparent' color='rgb(45, 35, 45)'/>
       </>
     );
   }

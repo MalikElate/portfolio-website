@@ -15,7 +15,6 @@ const styles = {
     marginTop: "5%"
   }
 };
-let color; 
 
 class Socials extends Component {
   render() {

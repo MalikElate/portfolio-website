@@ -11,8 +11,8 @@ import {
 
 const styles = {
   TypographyH2:  {
-    color: "rgb(45, 35, 45)",
-    padding: "5%"
+    color: 'rgb(45, 35, 45)',
+    padding: '5%'
   }
 };
 
@@ -22,7 +22,7 @@ class Portfolio extends Component {
     return (
       <> 
       {/* this invisible app bar prevents the header from covering the contents of the page */}
-      <AppBar position="static" style={{ background: 'transparent', boxShadow: 'none'}}> 
+      <AppBar position='static' style={{ background: 'transparent', boxShadow: 'none'}}> 
       <Toolbar>
           <Button></Button>
           <Button></Button>
@@ -31,9 +31,9 @@ class Portfolio extends Component {
       </AppBar>
       {/* ----------------------------------------------------------------------------------- */}
       {/* <Header background={'rgb(45, 35, 45)'}/>  */}
-      <Typography className={classes.TypographyH2} variant="h2">Projects</Typography> 
+      <Typography className={classes.TypographyH2} variant='h2'>Projects</Typography> 
       <ProjectList/>
-      <Socials/>
+      <Socials background='transparent' color='rgb(45, 35, 45)'/>
       </>
     );
   }

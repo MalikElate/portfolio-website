@@ -50,7 +50,7 @@ import {
               this.props.history.push('/') 
             }}> <Link style={{color: 'white'}} className={homeUnderline}>Home</Link></Button>
           </Typography>
-          <Button onClick={()=>{ this.props.history.push('/') }} style={{color: 'white'}}>
+          <Button onClick={()=>{ window.scrollTo(0,document.body.scrollHeight) }} style={{color: 'white'}}>
             <Link style={{color: 'white'}} className={contactUnderline}>Contact</Link>
           </Button>
 

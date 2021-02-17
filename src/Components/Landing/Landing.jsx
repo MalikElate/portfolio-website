@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom'; 
 import Subheader from '../Subheader/Subheader'; 
-import { IoIosArrowForward } from 'react-icons/io';
+import Socials from '../Socials/Socials'; 
 import {
   Grid,
   Typography, 
   withStyles, 
-  Button, 
  } from '@material-ui/core';
 
  const styles = {
@@ -48,6 +47,9 @@ class Home extends Component {
         > 
           <Typography className={classes.landingSubHeader} variant="h1">Malik Elate</Typography> 
           <Typography variant="h6"><Subheader/></Typography> 
+          <Grid style={{position: 'absolute', bottom: '10px', backgroundColor: 'transparent'}}>
+            <Socials background='transparent' color='white'/>
+          </Grid>
         </Grid>
       </>
     );

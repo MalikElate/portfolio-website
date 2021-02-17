@@ -31,7 +31,7 @@ class Portfolio extends Component {
     return (
       <> 
       {/* this invisible app bar prevents the header from covering the contents of the page */}
-      <AppBar position="static" style={{ background: 'transparent', boxShadow: 'none'}}> 
+      <AppBar position='static' style={{ background: 'transparent', boxShadow: 'none'}}> 
       <Toolbar>
           <Button></Button>
           <Button></Button>
@@ -40,16 +40,16 @@ class Portfolio extends Component {
       </AppBar>
       {/* ----------------------------------------------------------------------------------- */}
       <Header background={'rgb(45, 35, 45)'}/> 
-      <Box boxShadow={3} style={{margin: "5%", padding: "5%", display: "inline-block", backgroundColor: 'white'}}>
+      <Box boxShadow={3} style={{margin: '5%', padding: '5%', display: 'inline-block', backgroundColor: 'white'}}>
         <Grid 
         container
         spacing={0}
-        direction="row"
+        direction='row'
         >
           <Grid 
           lg={6} sm={6} xs={12}
           item
-          direction="row">
+          direction='row'>
             <Typography style={{textAlign: 'left'}}>
               Hi! I'm Malik Elate, I am a full stack web engineer. My favorite part of web development
               is working in a team solving a challenging problem. When I'm not coding, you can find my 
@@ -99,7 +99,7 @@ class Portfolio extends Component {
           </Grid>
           <Grid lg={6} sm={6} xs={12}
           item
-          direction="row"
+          direction='row'
           className={classes.imageGrid}
           >
           </Grid>

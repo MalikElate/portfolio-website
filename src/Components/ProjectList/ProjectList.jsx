@@ -17,17 +17,17 @@ class ProjectList extends Component {
            container
            spacing={0}
            direction="row"
-           alignItems="center"
-           justify="center"
+           alignItems="flex-start"
+           justify="flex-start"
         >
           { 
             this.props.reduxState.projectCardInfo.map((project, i) => 
               <Grid 
-              className="project-card-grid" key={i} item lg={3} sm={4} xs={12}
+              className="project-card-grid" key={i} item  xs={12} sm={5} lg={3} 
               container
               direction="row"
               justify="center"
-              alignItems="center"
+              alignItems="flex-start"
               style={{ padding: 20}}
               > 
                 <Project projectInfo={this.props.reduxState.projectCardInfo[i]} style={{marginTop:"50"}}/>
